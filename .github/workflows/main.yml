@@ -4,9 +4,8 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-        run: |
+      - uses: actions/checkout@v2
+      - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git tag -d latest
